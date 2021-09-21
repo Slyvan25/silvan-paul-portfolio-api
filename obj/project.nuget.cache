@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "4VT2AR6XQB5F9jURuRp3Ga877m6TpsGx0/30A3gaYkmEYUoaYOcZYefxFBt41qvpKMYMmH9jJIKijq/yxDvypQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\spaul\\Documents\\Repos\\Personal\\silvan-paul-portfolio-api\\silvan-paul-portfolio-api.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\spaul\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
+    "C:\\Users\\spaul\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
+    "C:\\Users\\spaul\\.nuget\\packages\\swashbuckle.aspnetcore\\5.6.3\\swashbuckle.aspnetcore.5.6.3.nupkg.sha512",
+    "C:\\Users\\spaul\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\5.6.3\\swashbuckle.aspnetcore.swagger.5.6.3.nupkg.sha512",
+    "C:\\Users\\spaul\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\5.6.3\\swashbuckle.aspnetcore.swaggergen.5.6.3.nupkg.sha512",
+    "C:\\Users\\spaul\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\5.6.3\\swashbuckle.aspnetcore.swaggerui.5.6.3.nupkg.sha512"
+  ],
+  "logs": []
+}
