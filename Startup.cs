@@ -11,10 +11,12 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
 
-namespace silvan_paul_portfolio_api
+namespace SilvanPaulPortfolioAPI
 {
     public class Startup
     {
+        readonly string MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
+        String connectionString = "server=localhost;user=root;password=1234;database=ef";
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
@@ -25,11 +27,20 @@ namespace silvan_paul_portfolio_api
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddCors(options =>
+            {
+                options.AddPolicy(name: MyAllowSpecificOrigins,
+                    builder =>
+                    {
+                        builder.WithOrigins("http://localhost:4200",
+                                            "https://silvanpaul.com");
+                    });
+            });
 
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "silvan_paul_portfolio_api", Version = "v1" });
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "SilvanPaulPortfolioAPI", Version = "v1" });
             });
         }
 
@@ -40,10 +51,12 @@ namespace silvan_paul_portfolio_api
             {
                 app.UseDeveloperExceptionPage();
                 app.UseSwagger();
-                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "silvan_paul_portfolio_api v1"));
+                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "SilvanPaulPortfolioAPI v1"));
             }
+            
 
             app.UseRouting();
+            app.UseCors(MyAllowSpecificOrigins);
 
             app.UseAuthorization();
 

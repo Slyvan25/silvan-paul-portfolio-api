@@ -7,7 +7,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 
-namespace silvan_paul_portfolio_api
+namespace SilvanPaulPortfolioAPI
 {
     public class Program
     {
